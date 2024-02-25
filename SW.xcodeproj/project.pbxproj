@@ -11,6 +11,11 @@
 		C0A44BC22B7A602D008346AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A44BC12B7A602D008346AC /* ContentView.swift */; };
 		C0A44BC42B7A602E008346AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A44BC32B7A602E008346AC /* Assets.xcassets */; };
 		C0A44BC72B7A602E008346AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A44BC62B7A602E008346AC /* Preview Assets.xcassets */; };
+		C0A44BCE2B7A6057008346AC /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A44BCD2B7A6057008346AC /* ModelManager.swift */; };
+		C0A44BD02B7A6063008346AC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A44BCF2B7A6063008346AC /* Helper.swift */; };
+		C0A44BD32B7A607A008346AC /* index2word.json in Resources */ = {isa = PBXBuildFile; fileRef = C0A44BD12B7A607A008346AC /* index2word.json */; };
+		C0A44BD42B7A607A008346AC /* word2index.json in Resources */ = {isa = PBXBuildFile; fileRef = C0A44BD22B7A607A008346AC /* word2index.json */; };
+		C0A44BD62B7A6085008346AC /* iOS_find_wordV2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = C0A44BD52B7A6085008346AC /* iOS_find_wordV2.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		C0A44BC12B7A602D008346AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0A44BC32B7A602E008346AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0A44BC62B7A602E008346AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C0A44BCD2B7A6057008346AC /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		C0A44BCF2B7A6063008346AC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C0A44BD12B7A607A008346AC /* index2word.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index2word.json; sourceTree = "<group>"; };
+		C0A44BD22B7A607A008346AC /* word2index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = word2index.json; sourceTree = "<group>"; };
+		C0A44BD52B7A6085008346AC /* iOS_find_wordV2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = iOS_find_wordV2.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				C0A44BBF2B7A602D008346AC /* SWApp.swift */,
 				C0A44BC12B7A602D008346AC /* ContentView.swift */,
+				C0A44BCD2B7A6057008346AC /* ModelManager.swift */,
+				C0A44BCF2B7A6063008346AC /* Helper.swift */,
+				C0A44BD12B7A607A008346AC /* index2word.json */,
+				C0A44BD22B7A607A008346AC /* word2index.json */,
+				C0A44BD52B7A6085008346AC /* iOS_find_wordV2.mlpackage */,
 				C0A44BC32B7A602E008346AC /* Assets.xcassets */,
 				C0A44BC52B7A602E008346AC /* Preview Content */,
 			);
@@ -126,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0A44BC72B7A602E008346AC /* Preview Assets.xcassets in Resources */,
+				C0A44BD42B7A607A008346AC /* word2index.json in Resources */,
+				C0A44BD32B7A607A008346AC /* index2word.json in Resources */,
 				C0A44BC42B7A602E008346AC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +156,9 @@
 			files = (
 				C0A44BC22B7A602D008346AC /* ContentView.swift in Sources */,
 				C0A44BC02B7A602D008346AC /* SWApp.swift in Sources */,
+				C0A44BD62B7A6085008346AC /* iOS_find_wordV2.mlpackage in Sources */,
+				C0A44BCE2B7A6057008346AC /* ModelManager.swift in Sources */,
+				C0A44BD02B7A6063008346AC /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +168,7 @@
 		C0A44BC82B7A602E008346AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -197,12 +218,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -211,6 +235,7 @@
 		C0A44BC92B7A602E008346AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -254,11 +279,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -270,11 +298,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SW/Preview Content\"";
 				DEVELOPMENT_TEAM = TC55M6A6Z4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -285,8 +314,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Seugjun.SW;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seungjunlee.swf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,11 +330,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"SW/Preview Content\"";
 				DEVELOPMENT_TEAM = TC55M6A6Z4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,8 +346,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Seugjun.SW;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seungjunlee.swf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
